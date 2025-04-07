@@ -1,0 +1,500 @@
+   17  git branch
+   18  ls -la
+   19  git status
+   20  git pull
+   21  git status
+   22  git pull origin main
+   23  git status
+   24  ls -la
+   25  nano .gitignore
+   26  git status
+   27  git add .
+   28  git commit -m "added .gitignore"
+   29  git push -u origin main
+   30  touch file1.jpg
+   31  git status
+   32  curl -O https://raw.githubusercontent.com/aliaskov/bashscripts/master/.gitignore
+   33  ls -la
+   34  git status
+   35  git add .
+   36  git status
+   37  git commit -m "added new"
+   38  git push
+   39  exit
+   40  echo "# git-into-new" >> README.md
+   41  pwd
+   42  git init
+   43  ls -la
+   44  git status
+   45  git add README.md
+   46  git status
+   47  git commit -m "add new repos"
+   48  git branch
+   49  git branch -M main
+   50  git remote add origin git@github.com:NataliiaKozak/git-into-new.git
+   51  git remote -v
+   52  git push -u origin main
+   53  touch file.txt
+   54  git status
+   55  git add file.txt
+   56  git commit -m "add new file.txt"
+   57  git push
+   58  exit
+   59  git init
+   60  touch nata.txt
+   61  git status
+   62  git add nata.txt
+   63  git status
+   64  echo “First commit” > file.txt
+   65  git status
+   66  git add file.txt
+   67  git commit -m "first commit"
+   68  git checkout -b feature-branch
+   69  git branch
+   70  git branch -M main
+   71  echo "change in feature-branch" >> file.txt 
+   72  git status
+   73  git add .
+   74  git commit -m "new change feauture-branche"
+   75  git log
+   76  git checkout main 
+   77  echo "change in main" >> file.txt
+   78  git status
+   79  git add file.txt
+   80  git commit -m "change main"
+   81  git merge feature-branch
+   82  nano file.txt
+   83  git status
+   84  git commit -am "fixed conflikt merge from feature-branch"
+   85  git status
+   86  git log
+   87  history
+   88  git log
+   89  echo $EDITOR
+   90  git log
+   91  git branch
+   92  git branch -d feature-branch
+   93  history
+   94  git branch
+   95  git checkout master
+   96  ls -la
+   97  git log
+   98  git merge main
+   99  git status
+  100  cat file.txt
+  101  git branch
+  102  git branch -d main
+  103  git branch -M main
+  104  history
+  105  echo "new text" >> file.txt
+  106  git add file.txt
+  107  git status
+  108  git commit -m "changeg"
+  109  git log --oneline
+  110  git commit --amend -m "changed"
+  111  git log --oneline
+  112  echo "new" >> newfile.txt
+  113  git add newfile.txt
+  114  git commit --amend --no-edit
+  115  git log --oneline
+  116  git branch
+  117  git checkout -b feature-branch
+  118  echo "hallo" >> file.txt
+  119  ls -l
+  120  git rebase main
+  121  git status
+  122  git add file.txt
+  123  git commit -m "added text"
+  124  git rebase main
+  125  git checkout main
+  126  echo "second change" >> file.txt
+  127  git commit -am "second change"
+  128  git checkout feature-branche
+  129  git branch
+  130  git checkout feature-branch
+  131  echo "third change" >> file.txt
+  132  git commit -am "third change"
+  133  git rebase main
+  134  git rebase --continue
+  135  nano file.txt
+  136  git rebase --continue
+  137  git status
+  138  git commit -am "both modif"
+  139  git rebase --continue
+  140  git status
+  141  git add file.txt
+  142  git commit -m "modified"
+  143  git status
+  144  git status
+  145  git rebase --continue
+  146  git log
+  147  git log --oneline
+  148  git log --oneline --graph --all
+  149  history
+  150  git commit --amend -m “new change”
+  151  git commit --amend -m "new change"
+  152  git log --oneline --graph --all
+  153  git log --oneline
+  154  touch newfile2.txt
+  155  git add newfile2.txt 
+  156  git status
+  157  git reset HEAD
+  158  git status
+  159  git commit -am "added newfile2"
+  160  git add newfile2.txt 
+  161  git commit -m "newfile2"
+  162  git log --oneline
+  163  git reset --soft HEAD-1
+  164  reset --soft HEAD~1
+  165  git reset --soft HEAD~1
+  166  git log --oneline
+  167  git commit -m "commit 3"
+  168  git reset --mixed HEAD~1
+  169  git status
+  170  history
+  171  git status
+  172  git add newfile2.txt
+  173  git commit -m "fixet"
+  174  git status
+  175  git reset --hard HEAD~1
+  176  git revert HEAD
+  177  export EDITOR=nano
+  178  git revert HEAD
+  179  git log --oneline
+  180  git revert -n HEAD~3..HEAD
+  181  git log --oneline
+  182  git revert -n HEAD~3.. HEAD
+  183  git log --oneline
+  184  git revert -n HEAD~3..HEAD
+  185  git log --oneline
+  186  mkdir 050325
+  187  cd 050325
+  188  git init 
+  189  ls -la
+  190  echo "test text" > file.txt
+  191  echo "read me" > README.md
+  192  git status
+  193  git add .
+  194  git commit -m "ddd"
+  195  git status
+  196  git log
+  197  git commit --amend -m "added files README and file"
+  198  git branch
+  199  git branch -M main
+  200  git checkout -b test
+  201  git branch
+  202  echo "#archive"
+  203  echo "#archive\n"
+  204  echo "#archive\n *.rar"
+  205  echo "#archive\n *.rar\n *.rar"
+  206  echo -e "#archive\n *.rar\n *.rar"
+  207  echo -e "#archive\n *.rar" >> .gitignore
+  208  echo "new data" >> file.txt
+  209  git status
+  210  git add .
+  211  git status
+  212  git commit -m "changed file.txt and added .gitignore"
+  213  git log
+  214  git branch
+  215  git checkout main
+  216  echo "newest data" >> file.txt
+  217  touch 1.rar
+  218  git status
+  219  git add .
+  220  git status
+  221  git commit -m "new file 1.rar and new data in file.txt"
+  222  git merge test
+  223  git status
+  224  nano file.txt
+  225  git status
+  226  git add file.txt
+  227  git commit -m "merged main and test"
+  228  git log --oneline --graph --all
+  229  git remote -v
+  230  git remote add origin git@github.com:NataliiaKozak/050325.git
+  231  git puch -u origin main
+  232  git push -u origin main
+  233  git pull
+  234  git pull origin main
+  235  git pull --rebase origin main
+  236  git status
+  237  nano README.md
+  238  git add .
+  239  git rebase --continue
+  240  git push -u origin main
+  241  git status
+  242  nano file.txt
+  243  git status
+  244  git add .
+  245  git status
+  246  history
+  247  git log
+  248  git push --force
+  249  git remote -v
+  250  git branch
+  251  git checkout main
+  252  git commit -m "add"
+  253  git checkout main
+  254  git status
+  255  git remote -v
+  256  git push --force
+  257  git push --set-upstream origin main
+  258  git status
+  259  git rebase --continue
+  260  git push --force
+  261  git push --set-upstream origin main
+  262  git pull
+  263  git pull origin main
+  264  history
+  265  git push -f
+  266  git log
+  267  git push --force-with-lease
+  268  git remote -v
+  269  git remote remove origin
+  270  git remote -v
+  271  git remote add origin git@github.com:NataliiaKozak/050325.git
+  272  git remote -v
+  273  git status
+  274  git push --force
+  275   git push --set-upstream origin main
+  276  git status
+  277  git pull origin main
+  278  git pull origin/main
+  279  git push
+  280  git branch
+  281  git pull
+  282  git config pull.rebase false
+  283  git status
+  284  nano file.txt
+  285  nano file.txt
+  286  git add .
+  287  git commit -m "text"
+  288  git push -u origin main
+  289  npm install -g sass
+  290  winget install Schniz.fnm
+  291  fnm install 22
+  292  fnm install 22
+  293  fnm install 22
+  294  node -v # Should print "v22.14.0".
+  295  npm -v # Should print "10.9.2".
+  296  node -v
+  297  npm -v
+  298  ssh ec2-user@linux.itcareerhub.de 
+  299  ssh ec2-user@linux.itcareerhub.de 
+  300  ssh ec2-user@linux.itcareerhub.de
+  301  git clone git@github.com:Fel11x32/to-do-app-ich.git
+  302  pwd
+  303  cd to-do-app-ich
+  304  ssh ec2-user@linux.itcareerhub.de 
+  305  git clone git@github.com:NataliiaKozak/L18.03.git
+  306  ls
+  307  cd L18.03/
+  308  clear
+  309  git remote add upstream https://github.com/iohichu/L18.03.git
+  310  git remote -v
+  311  git remote -v
+  312  git branch
+  313  git merge upstream/main
+  314  git fetch upstream
+  315  git merge upstream/main
+  316  git status
+  317  ls -l
+  318  echo "hello" >> test/nataliia.txt
+  319  git status
+  320  git add test/nataliia.txt
+  321  git commit -m "added new file"
+  322  git push -u origin main
+  323  git status
+  324  history
+  325  exit
+  326  sh --version
+  327  ash --version
+  328  whereis bash
+  329  wheris
+  330  ssh ec2-user@linux.itcareerhub.de 
+  331  ping -c 10 google.com
+  332  sudo ping -c 10 google.com
+  333  ping -t 10 google.com
+  334  ping -t google.com
+  335  ping google.com
+  336  ssh ec2-user@linux.itcareerhub.de
+  337  cd /opt/131224-wdm/nataliia
+  338  pwd
+  339  ec2-user@linux.itcareerhub.de 
+  340  ssh ec2-user@linux.itcareerhub.de 
+  341  ssh ec2-user@linux.itcareerhub.de 
+  342  md5sum ~/Downloads/archive.tar.gz
+  343  scp ~/Downloads/archiv.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia
+  344  scp ~/Downloads/archiv.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia/archive.tar.gz
+  345  scp ~/Downloads/archiv.tar.gz ec2-user@linux.itcareerhub.de/opt/131224-wdm/Nataliia/archive.tar.gz
+  346  scp ~/Downloads/archive.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia/archive.tar.gz
+  347  scp /c/Users/User1/Downloads/archive.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia
+  348  scp /c/Users/User1/Downloads/archive.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia
+  349  md5sum ~/Downloads/archiv.tar.gz 
+  350  scp ~/Downloads/archiv.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia
+  351  ssh ec2-user@linux.itcareerhub.de 
+  352  ssh ec2-user@linux.itcareerhub.de 
+  353  scp ~/Downloads/archiv.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia
+  354  scp ~/Desktop/archive.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia
+  355  scp ~/Desktop/archive.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/Nataliia/
+  356  git clone git@github.com:NataliiaKozak/git_intro.git
+  357  ls -la
+  358  mv git_intro HW_10
+  359  ls -la
+  360  ls -la
+  361  git clone git@github.com:NataliiaKozak/050325.git
+  362  ls -la
+  363  mv 050325 HW_11
+  364  ls -la HW_11
+  365  find find . -type d -name ".git" -exec rm -rf {} +
+  366  find . -type d -name ".git" -exec rm -rf {} +
+  367  ls -la HW_11
+  368  git init
+  369  nano .gitignore
+  370  git status
+  371  git add .
+  372  git commit -m "created direktory Frontend_HW"
+  373  git branch -M main
+  374  git remote add origin git@github.com:NataliiaKozak/Frontend_HW.git
+  375  git push -u origin main
+  376  cd ~/Desktop
+  377  cd ~/Desktop
+  378  git fork git@github.com:NataliiaKozak/deleting_repo.git
+  379  git clone git@github.com:NataliiaKozak/deleting_repo.git
+  380  gh --version
+  381  cd deleting_repo
+  382  ls -la
+  383  nano githubdel.sh 
+  384  gh --version
+  385  #!/bin/bash
+  386  USERNAME="NataliiaKozak"
+  387  REPOS=(   "test_scripts"
+  388    )
+  389  for REPO in "${REPOS[@]}"; do   echo "Удаляю $USERNAME/$REPO...";   gh repo delete "$USERNAME/$REPO" --yes; done
+  390  gh --version
+  391  gh auth login
+  392  gh auth refresh -h github.com -s delete_repo
+  393  cd deleting-repo
+  394  cd deleting_repo/
+  395  ls -la
+  396  nano githubdel.sh 
+  397  chmod 744 githubdel.sh 
+  398  ls -la
+  399  ./githubdel.sh 
+  400  nano githubdel.sh 
+  401  pwd
+  402  cd
+  403  mkdir git-merge-test
+  404  cd git-merge-test
+  405  git init .
+  406  git branch
+  407  git branch -M main
+  408  echo "this is some content to mess with" > merge.txt
+  409  git add merge.txt
+  410  git status
+  411  git branch
+  412  git commit -m "we are commiting the inital content"
+  413  git checkout -b new_branch_to_merge_later
+  414  git branch
+  415  ls -la
+  416  echo "totally different content to merge later" > merge.txt
+  417  git add merge.txt
+  418  git commit -m "we are commiting the inital content"
+  419  git checkout main
+  420  git branch
+  421  echo "new content" >> merge.txt
+  422  git commit -am "added new data"
+  423  git status
+  424  git branch
+  425  git merge new_branch_to_merge_later 
+  426  git status
+  427  vi merge.txt
+  428  git status
+  429  git add merge.txt
+  430  git status
+  431  git merge --continue
+  432  git status
+  433  git branch -d new_branch_to_merge_later 
+  434  git remote add origin git@github.com:NataliiaKozak/git-merge-test.git
+  435  git push 
+  436  git remote add origin git@github.com:NataliiaKozak/git-merge-test.git
+  437  git remote -v
+  438  git push -u origin main
+  439  git branch --set-upstream-to=origin/main main
+  440  git pull --rebase
+  441  git branch --set-upstream-to=origin/<branch> main
+  442  git pull origin main
+  443  git fetch origin main
+  444  git status
+  445  ls -la
+  446  git rebase --continue
+  447  git pull --rebase
+  448  git status
+  449  ls -la
+  450  git branch --set-upstream-to=origin/<branch> main
+  451  git branch --set-upstream-to=origin/main main
+  452  git pull --rebase
+  453  git status
+  454  vi merge.txt
+  455  git rebase --continue
+  456  git add .
+  457  git rebase --continue
+  458  ls -la
+  459  git push
+  460  history
+  461  ssh ec2-user@linux.itcareerhub.de
+  462  scp archive.tar.gz ec2-user@linux.itcareerhub.de:/opt/131224-wdm/nataliia/
+  463  ssh ec2-user@linux.itcareerhub.de
+  464  git init
+  465  git checkout -b gitignore
+  466  nano .gitignore
+  467  git add .gitignore
+  468  git status
+  469  git status
+  470  git add .
+  471  git status
+  472  git commit -m "added .gitignore and text.docx"
+  473  git branch
+  474  git merge
+  475  git checkout main
+  476  git checkout master
+  477  ssh ec2-user@linux.itcareerhub.de 
+  478  echo "# git-branch" >> README.md
+  479  git init
+  480  git add README.md
+  481  git commit -m "HW_10"
+  482  git branch -M main
+  483  git remote add origin git@github.com:NataliiaKozak/git-branch.git
+  484  git checkout -b gitignore
+  485  git branch
+  486  nano .gitignore
+  487  git add .
+  488  git status
+  489  git commit -m "added file .gitignore"
+  490  git checkout main
+  491  git branch
+  492  git push -u origin main
+  493  git push origin gitignore
+  494  git branch
+  495  git merge gitignore
+  496  git push
+  497  git pull
+  498  git status
+  499  history
+  500  git clone git@github.com:NataliiaKozak/git_team_work.git
+  501  git clone git@github.com:NataliiaKozak/HW_12_1.git
+  502  git checkout -b feature
+  503  cd ~/Desktop/HW_12_1/
+  504  git checkout -b feature
+  505  nano README.md
+  506  nano .gitignore
+  507  git add .
+  508  git status
+  509  git commit -m "modified README.md and .gitignore"
+  510  git push origin feature
+  511  git commit --amend
+  512  git branch
+  513  git checkout main
+  514  git branch
+  515  git merge feature
+  516  history > history.txt
